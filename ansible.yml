@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: true
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: current working directory
+      command: pwd
+    - name: create directory
+      file:
+        path: /opt/ansible/
+        state: directory
+    - name: 
