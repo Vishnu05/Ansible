@@ -10,4 +10,5 @@
       file:
         path: /opt/ansible/
         state: directory
-    - name: 
+    - name: running sh file
+      command: sh new.sh

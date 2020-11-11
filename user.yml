@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: true
+  become_method: sudo
+  become_user: root
+  tasks:
+    - name: credentials update
+      expect:
+        command: sh ps.sh
+        responses:
+          "username : ": "test"
+          "password : ": "1234"
+          " file name : ": "hello"
+          " of your file": "txt"
